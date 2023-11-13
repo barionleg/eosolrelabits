@@ -43,10 +43,10 @@ In memory of Daniel Parson(1989-2023)<br />
 	document.getElementById("summary").innerHTML = `Solrela knows <a href='${source}' target='_blank'>${count} words</a>.`
 	// Connect interface
 	document.getElementById("search").addEventListener("keyup", (event) =>{ 
-		if (event.key === "Enter") findword(event.target.value) 
+		if (event.key === "Enter") findword(event.target.value.toLowerCase()) 
 		});
 	document.getElementById("button").onclick = (event) => {
-		findword(document.getElementById("search").value) 
+		findword(document.getElementById("search").value.toLowerCase()) 
 	}
 	// Find value
 	function findword(target){
