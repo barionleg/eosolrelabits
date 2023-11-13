@@ -7,11 +7,15 @@
 </head>
 <body>
 	<input type="text" id="search" placeholder="blue">
-	<div id="result"></div>
+	<input type="button" id="button" value="Search"  onclick="myFunction()"/>
+	<br />
+	<ul id="result"></ul>
+	<p id='summary'></p>
 </body>
 <script type="text/javascript">
 	'use strict'
 	// Parse dictionary
+	let count = 0
 	let data = {sr: {}, en:{}};
 	dict.split('\n').forEach((value) => {
 		let parts = value.split(',')
@@ -24,13 +28,19 @@
 				if(!data.en[en])
 					data.en[en] = []
 				data.en[en].push(sr)
+				count++;
 			}
 		})
 	})
+	document.getElementById("summary").innerHTML = `Found ${count} items.`
 	console.log(data)
 	// Connect interface
-	let search = document.getElementById("search")
-	search.addEventListener("keyup", (event) =>{ findword(event.target.value) });
+	document.getElementById("search").addEventListener("keyup", (event) =>{ 
+		if (event.key === "Enter") findword(event.target.value) 
+		});
+	document.getElementById("button").onclick = (event) => {
+		findword(document.getElementById("search").value) 
+	}
 	// Find value
 	function findword(target){
 		let res = document.getElementById("result")
@@ -40,14 +50,18 @@
 		// Search English
 		Object.keys(data.en).forEach((k)=> {
 			if(k.includes(target))
-				res.innerHTML += `${k}: ${data.en[k]}<br />`
+				res.innerHTML += `<li class='en'><b>${k}</b>: ${data.en[k]}</li>`
 			 });
-
+		// Search Solresol
+		Object.keys(data.sr).forEach((k)=> {
+			if(k.includes(target))
+				res.innerHTML += `<li class='en'><b>${k}</b>: ${data.sr[k]}</li>`
+			 });
 	}
 </script>
 
 <style>
-	body { background-color: #ebd6ff}
+	body { background-color: #ebd6ff; padding: 30px}
 </style>
 
 </html> 
