@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
 <head>
 	<meta charset="utf-8"/>
 	<title>Solresol Translator</title>
@@ -12,11 +13,14 @@
 	<ul id="result"></ul>
 	<p id='summary'></p>
 	<p><small>Translated from François Sudre's original definitions by Garrison Osteen<br />
-Gradually modified and edited by the Solresol Community</small></p>
+Gradually modified and edited by the Solresol Community<br />
+In memory of Daniel Parson(1989-2023)<br />
+<span style='color:#a4f'>&bull;</span><span style='color:#f00'>&bull;</span><span style='color:#a4f'>&bull;</span></small></p>
 </body>
 <script type="text/javascript">
 	'use strict'
 	// Parse dictionary
+	let source = "https://docs.google.com/spreadsheets/d/1WiikP_O8Uw_aKL5uKmKgA4ULIgcLLiLeCI4oeKQUEOs"
 	let count = 0
 	let data = {sr: {}, en:{}};
 	dict.split('\n').forEach((value) => {
@@ -34,7 +38,7 @@ Gradually modified and edited by the Solresol Community</small></p>
 			}
 		})
 	})
-	document.getElementById("summary").innerHTML = `Found ${count} items.`
+	document.getElementById("summary").innerHTML = `Solrela knows <a href='${source}' target='_blank'>${count} words</a>.`
 	console.log(data)
 	// Connect interface
 	document.getElementById("search").addEventListener("keyup", (event) =>{ 
@@ -64,6 +68,7 @@ Gradually modified and edited by the Solresol Community</small></p>
 
 <style>
 	body { background-color: #ebd6ff; padding: 30px}
+	body a { color: #5900b3; }
 </style>
 
 </html> 
