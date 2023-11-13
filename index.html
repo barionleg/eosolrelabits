@@ -15,7 +15,7 @@
 	<p><small>Translated from François Sudre's original definitions by Garrison Osteen<br />
 Gradually modified and edited by the Solresol Community<br />
 In memory of Daniel Parson(1989-2023)<br />
-<span style='color:#a4f'>&bull;</span><span style='color:#f00'>&bull;</span><span style='color:#a4f'>&bull;</span></small></p>
+	<span style='color:#a4f'>&bull;</span><span style='color:#f00'>&bull;</span><span style='color:#a4f'>&bull;</span></small></p>
 </body>
 <script type="text/javascript">
 	'use strict'
@@ -25,10 +25,10 @@ In memory of Daniel Parson(1989-2023)<br />
 	let data = {sr: {}, en:{}};
 	dict.split('\n').forEach((value) => {
 		let parts = value.split('\t')
-		let sr = parts.shift().toLowerCase()
+		let sr = parts.shift().trim().toLowerCase()
 		data.sr[sr] = []
 		if(parts[0]){
-			parts.forEach((item) => {
+			parts[0].split(",").forEach((item) => {
 				if(item != ""){
 					let en = item.replace('"', '').trim().toLowerCase()
 					data.sr[sr].push(en)
@@ -41,7 +41,6 @@ In memory of Daniel Parson(1989-2023)<br />
 		}
 	})
 	document.getElementById("summary").innerHTML = `Solrela knows <a href='${source}' target='_blank'>${count} words</a>.`
-	console.log(data)
 	// Connect interface
 	document.getElementById("search").addEventListener("keyup", (event) =>{ 
 		if (event.key === "Enter") findword(event.target.value) 
