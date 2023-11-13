@@ -24,19 +24,21 @@ In memory of Daniel Parson(1989-2023)<br />
 	let count = 0
 	let data = {sr: {}, en:{}};
 	dict.split('\n').forEach((value) => {
-		let parts = value.split(',')
+		let parts = value.split('\t')
 		let sr = parts.shift().toLowerCase()
 		data.sr[sr] = []
-		parts.forEach((item) => {
-			if(item != ""){
-				let en = item.replace('"', '').trim().toLowerCase()
-				data.sr[sr].push(en)
-				if(!data.en[en])
-					data.en[en] = []
-				data.en[en].push(sr)
-				count++;
-			}
-		})
+		if(parts[0]){
+			parts.forEach((item) => {
+				if(item != ""){
+					let en = item.replace('"', '').trim().toLowerCase()
+					data.sr[sr].push(en)
+					if(!data.en[en])
+						data.en[en] = []
+					data.en[en].push(sr)
+					count++;
+				}
+			})
+		}
 	})
 	document.getElementById("summary").innerHTML = `Solrela knows <a href='${source}' target='_blank'>${count} words</a>.`
 	console.log(data)
