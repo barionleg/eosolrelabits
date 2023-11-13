@@ -6,19 +6,48 @@
 	<script src="dict.js"></script>
 </head>
 <body>
-	
+	<input type="text" id="search" placeholder="blue">
+	<div id="result"></div>
 </body>
 <script type="text/javascript">
 	'use strict'
 	// Parse dictionary
+	let data = {sr: {}, en:{}};
 	dict.split('\n').forEach((value) => {
-		console.log(value)
+		let parts = value.split(',')
+		let sr = parts.shift().toLowerCase()
+		data.sr[sr] = []
+		parts.forEach((item) => {
+			if(item != ""){
+				let en = item.replace('"', '').trim().toLowerCase()
+				data.sr[sr].push(en)
+				if(!data.en[en])
+					data.en[en] = []
+				data.en[en].push(sr)
+			}
+		})
 	})
+	console.log(data)
+	// Connect interface
+	let search = document.getElementById("search")
+	search.addEventListener("keyup", (event) =>{ findword(event.target.value) });
+	// Find value
+	function findword(target){
+		let res = document.getElementById("result")
+		res.innerHTML = ""
+		if(target.length < 3)
+			return
+		// Search English
+		Object.keys(data.en).forEach((k)=> {
+			if(k.includes(target))
+				res.innerHTML += `${k}: ${data.en[k]}<br />`
+			 });
+
+	}
 </script>
 
 <style>
-	
+	body { background-color: #ebd6ff}
 </style>
 
 </html> 
-
