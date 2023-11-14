@@ -3285,7 +3285,7 @@ remifa	to send, to apply
 remisol	food, sustenance
 remila	give, gift, present
 remisi	inexplicable, indefinable, incomprehensible, inconceiveable, enigmatic
-fa	refado	look away, evade, distraction
+refado	look away, evade, distraction
 refare	time, entropy, distribution
 refami	displease, unpleasant, uncomfortable
 refafa	--
@@ -3537,7 +3537,7 @@ sifafa	--
 sifasol	wait, patience, patient
 sifala	repeat, recapitulate
 sifasi	(number)
-sol	sisoldo	compete, contest
+sisoldo	compete, contest
 sisolre	encourage, embolden, stimulate
 sisolmi	inspect, review, inspector, inspection
 sisolfa	review, scrutinize, investigate
