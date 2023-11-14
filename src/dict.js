@@ -3320,7 +3320,7 @@ midofa	prefer, like the most
 midosol	admire
 midola	reciprocity, mutuality, respective, vice versa
 midosi	fond of, attached, be attached to, friend, friendly, take to
-miredo	to to have
+miredo	to have
 mirere	--
 miremi	10(number)
 mirefa	

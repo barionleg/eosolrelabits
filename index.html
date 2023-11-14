@@ -7,6 +7,7 @@
 	<script src="src/dict.js"></script>
 </head>
 <body>
+	<noscript>The search requires Javascript.</noscript>
 	<input type="text" id="search" placeholder="blue">
 	<input type="button" id="button" value="Search"  onclick="myFunction()"/>
 	<br />
@@ -86,13 +87,13 @@ In memory of Daniel Parson(1989-2023)<br />
 </script>
 
 <style>
-	body { background-color: #ebd6ff; padding: 30px; max-width:600px; margin:0px auto}
+	body { background-color: #ebd6ff; padding: 30px; max-width:600px; margin:0px auto; font-family: sans-serif}
 	body a { color: #5900b3; }
 	body ul { padding: 0px }
 	body ul li { list-style-type: none; padding:5px 10px; margin-bottom:1px; border-radius:2px }
 	body #search { text-transform: lowercase; }
 	body ul li.match { background:#d0c0df; }
-	body ul .en { background:white; }
+	body ul .en { }
 	body ul .sr { background:black; }
 </style>
 
