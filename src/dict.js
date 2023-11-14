@@ -3224,7 +3224,7 @@ dodola	February
 dodosi	March
 doredo	zero(number)
 dorere	April
-doremi	to be
+doremi	to be, to become
 dorefa	--
 doresol	--
 dorela	--
@@ -3246,7 +3246,7 @@ dofasi	adore, worship
 dosoldo	eleven(number)
 dosolre	--
 dosolmi	--
-dosolfa	by thirsty
+dosolfa	awake
 dosolsol	north
 dosolla	pencil, marker, drawing, writing
 dosolsi	water
@@ -3320,7 +3320,7 @@ midofa	prefer, like the most
 midosol	admire
 midola	reciprocity, mutuality, respective, vice versa
 midosi	fond of, attached, be attached to, friend, friendly, take to
-miredo	to have
+miredo	to have, to host
 mirere	--
 miremi	10(number)
 mirefa	
@@ -3390,7 +3390,7 @@ fafafa	note "Fa" itself
 fafasol	the past
 fafala	--
 fafasi	--
-fasoldo	cause, because of, due to
+fasoldo	asleep
 fasolre	to come
 fasolmi	malice, unkindness, ill will, disparaging, malignancy
 fasolfa	3(number)
