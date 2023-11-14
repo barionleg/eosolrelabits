@@ -23,22 +23,25 @@ In memory of Daniel Parson(1989-2023)<br />
 	let source = "https://git.sr.ht/~rabbits/solrela"
 	let origin = "Unknown"
 	let count = 0
-	let data = {sr: {}, en:{}};
+	let data = {
+		sr: {},
+		en: {}
+	};
 	dict.split('\n').forEach((value) => {
 		let parts = value.split('\t')
-		if(parts[0] == ";;"){
+		if (parts[0] == ";;") {
 			console.log("Parsing", parts[1])
 			origin = parts[1]
 		}
 		let sr = parts.shift().trim().toLowerCase()
-		if(parts[0] && sr != ';;' && parts[0] != '--'){
+		if (parts[0] && sr != ';;' && parts[0] != '--') {
 			data.sr[sr] = []
 			parts[0].split(",").filter((word) => word.length > 0).forEach((item) => {
 				let en = item.replace('"', '').trim().toLowerCase()
-				if(origin == "Modern Symmetric Solresol")
+				if (origin == "Modern Symmetric Solresol")
 					en += "*"
 				data.sr[sr].push(en)
-				if(!data.en[en])
+				if (!data.en[en])
 					data.en[en] = []
 				data.en[en].push(sr)
 				count++;
@@ -47,34 +50,38 @@ In memory of Daniel Parson(1989-2023)<br />
 	})
 	document.getElementById("summary").innerHTML = `Solrela knows <a href='${source}' target='_blank'>${count} words</a>.`
 	// Connect interface
-	document.getElementById("search").addEventListener("keyup", (event) =>{ 
-		if (event.key === "Enter") findword(event.target.value.toLowerCase()) 
-		});
+	document.getElementById("search").addEventListener("keyup", (event) => {
+		if (event.key === "Enter") findword(event.target.value.toLowerCase())
+	});
 	document.getElementById("button").onclick = (event) => {
-		findword(document.getElementById("search").value.toLowerCase()) 
+		findword(document.getElementById("search").value.toLowerCase())
 	}
+	// Read anchor tag on start
+	if (window.location.hash.substring(1))
+		findword(window.location.hash.substring(1))
 	// Find value
-	function findword(target){
+	function findword(target) {
 		let res = document.getElementById("result")
 		res.innerHTML = ""
-		if(target.length < 3)
+		if (target.length < 3)
 			return
 		// Search for English match
-		if(data.en[target])
+		if (data.en[target])
 			res.innerHTML += `<li class='en match'><b>${target}</b>: ${data.en[target].join(', ')}.</li>`
 		// Search for Solresol match
-		if(data.sr[target])
+		if (data.sr[target])
 			res.innerHTML += `<li class='sr match'><b>${target}</b>: ${data.sr[target].join(', ')}.</li>`
 		// Search English
-		Object.keys(data.en).forEach((k)=> {
-			if(k.includes(target) && k != target)
+		Object.keys(data.en).forEach((k) => {
+			if (k.includes(target) && k != target)
 				res.innerHTML += `<li class='en'><b>${k}</b>: ${data.en[k].join(', ')}.</li>`
-			 });
+		});
 		// Search Solresol
-		Object.keys(data.sr).forEach((k)=> {
-			if(k.includes(target) && k != target)
+		Object.keys(data.sr).forEach((k) => {
+			if (k.includes(target) && k != target)
 				res.innerHTML += `<li class='en'><b>${k}</b>: ${data.sr[k].join(', ')}.</li>`
-			 });
+		});
+		window.location.hash = target
 	}
 </script>
 
