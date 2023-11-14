@@ -3299,7 +3299,7 @@ resolfa	to leave
 resolsol	--
 resolla	pay, materialism, materialistic, materialize
 resolsi	discourage, discouragement, tedious
-relado	be sleepy, misanthropy, misanthrope
+relado	misanthropy, misanthrope
 relare	--
 relami	distrust, suspect, beware, skittish
 relafa	unable, impossible, impracticable, impossibility
