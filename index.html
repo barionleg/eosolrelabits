@@ -21,15 +21,22 @@ In memory of Daniel Parson(1989-2023)<br />
 	'use strict'
 	// Parse dictionary
 	let source = "https://git.sr.ht/~rabbits/solrela"
+	let origin = "Unknown"
 	let count = 0
 	let data = {sr: {}, en:{}};
 	dict.split('\n').forEach((value) => {
 		let parts = value.split('\t')
+		if(parts[0] == ";;"){
+			console.log("Parsing", parts[1])
+			origin = parts[1]
+		}
 		let sr = parts.shift().trim().toLowerCase()
-		if(parts[0]){
+		if(parts[0] && sr != ';;' && parts[0] != '--'){
 			data.sr[sr] = []
 			parts[0].split(",").filter((word) => word.length > 0).forEach((item) => {
 				let en = item.replace('"', '').trim().toLowerCase()
+				if(origin == "Modern Symmetric Solresol")
+					en += "*"
 				data.sr[sr].push(en)
 				if(!data.en[en])
 					data.en[en] = []
