@@ -1,16 +1,14 @@
-image: debian/stable
+image: alpine/edge
 oauth: pages.sr.ht/PAGES:RW
+packages:
+- hut
 environment:
-    SITE: rabbits.srht.site/solrela
+  site: rabbits.srht.site
 sources:
     - https://git.sr.ht/~rabbits/solrela
 tasks:
-    - upload: |
+    - package: |
         cd solrela
-        tar -czf out.tar.gz index.html src/
-        acurl() {
-            set +x
-            curl -H "Authorization: Bearer ${OAUTH2_TOKEN}" "${@}"
-            set -x
-        }
-        acurl -fsS "https://pages.sr.ht/publish/${SITE}" -Fcontent=@out.tar.gz
+        tar -czf ../out.tar.gz index.html media/ src/
+    - upload: 
+        hut pages publish -d $site -s /solrela  out.tar.gz
