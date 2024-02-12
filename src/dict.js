@@ -3558,5 +3558,9 @@ sisifa	lightning, flash
 sisisol	storm
 sisila	heat, warmth
 sisisi	note "Si" itself
+
+; Found in the french dictionary
+
+soldosisol to revise
 `
 
