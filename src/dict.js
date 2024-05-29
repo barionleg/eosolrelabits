@@ -3355,7 +3355,7 @@ milafa	idolize, dote on, idolatry
 milasol	love (for things)
 milala	--
 milasi	love, cherish, lover, enamored
-misido	--
+misido	shameful, dishonorable, ignominious
 misire	to last, durable, stability, permanent, duration
 misimi	pressure, resistance
 misifa	marry, marriage, husband, wife, spouse
