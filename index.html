@@ -21,35 +21,38 @@ In memory of Daniel Parson(1989-2023)<br />
 <script type="text/javascript">
 	'use strict'
 	// Parse dictionary
-	let source = "https://git.sr.ht/~rabbits/solrela"
-	let origin = "Unknown"
+	let file = "https://git.sr.ht/~rabbits/solrela"
 	let count = 0
+	let source
 	let data = {
 		sr: {},
 		en: {}
 	};
 	dict.split('\n').forEach((value) => {
+		if(!value) return
 		let parts = value.split('\t')
+		// Set origin
 		if (parts[0] == ";;") {
-			console.log("Parsing", parts[1])
-			origin = parts[1]
+			source = parts[1]
+			return
 		}
 		let sr = parts.shift().trim().toLowerCase()
-		if (parts[0] && sr != ';;' && parts[0] != '--') {
-			data.sr[sr] = []
+		if(parts[0]) {
+			// Create solresol field
+			if(!data.sr[sr]) data.sr[sr] = {}
 			parts[0].split(",").filter((word) => word.length > 0).forEach((item) => {
 				let en = item.replace('"', '').trim().toLowerCase()
-				if (origin == "Modern Symmetric Solresol")
-					en += "*"
-				data.sr[sr].push(en)
-				if (!data.en[en])
-					data.en[en] = []
-				data.en[en].push(sr)
+				if(!data.sr[sr][en]) data.sr[sr][en] = []
+				data.sr[sr][en].push(source)
+				// Create english field
+				if (!data.en[en]) data.en[en] = {}
+				if (!data.en[en][sr]) data.en[en][sr] = []
+				data.en[en][sr].push(source)
 				count++;
 			})
 		}
 	})
-	document.getElementById("summary").innerHTML = `Solrela knows <a href='${source}' target='_blank'>${count} words</a>.`
+	document.getElementById("summary").innerHTML = `Solrela knows <a href='${file}' target='_blank'>${count} words</a>.`
 	// Connect interface
 	document.getElementById("search").addEventListener("keyup", (event) => {
 		if (event.key === "Enter") findword(event.target.value.toLowerCase())
@@ -64,23 +67,32 @@ In memory of Daniel Parson(1989-2023)<br />
 	function findword(target) {
 		let res = document.getElementById("result")
 		res.innerHTML = ""
-		if (target.length < 3)
+		if (target.length < 2)
 			return
+
 		// Search for English match
-		if (data.en[target])
-			res.innerHTML += `<li class='en match'><b>${target}</b>: ${data.en[target].join(', ')}.</li>`
+		if (data.en[target]) {
+			Object.keys(data.en[target]).forEach((k) => {
+				res.innerHTML += `<li class='en match'><b>${target}</b>: ${k} <span class='source'>${data.en[target][k].join(', ')}</span></li>`	
+			});
+		}
+
 		// Search for Solresol match
-		if (data.sr[target])
-			res.innerHTML += `<li class='sr match'><b>${target}</b>: ${data.sr[target].join(', ')}.</li>`
+		if (data.sr[target]) {
+			Object.keys(data.sr[target]).forEach((k) => {
+				res.innerHTML += `<li class='sr match'><b>${target}</b>: ${k} <span class='source'>${data.sr[target][k].join(', ')}</span></li>`	
+			});
+		}
+
 		// Search English
 		Object.keys(data.en).forEach((k) => {
 			if (k.includes(target) && k != target)
-				res.innerHTML += `<li class='en'><b>${k}</b>: ${data.en[k].join(', ')}.</li>`
+				res.innerHTML += `<li class='en'><b>${k}</b>: ${Object.keys(data.en[k]).join(', ')} <span class='source'>${Object.values(data.en[k]).join(', ')}</span></li>`
 		});
 		// Search Solresol
 		Object.keys(data.sr).forEach((k) => {
 			if (k.includes(target) && k != target)
-				res.innerHTML += `<li class='en'><b>${k}</b>: ${data.sr[k].join(', ')}.</li>`
+				res.innerHTML += `<li class='en'><b>${k}</b>: ${Object.keys(data.sr[k]).join(', ')} <span class='source'>${Object.values(data.sr[k]).join(', ')}</span></li>`
 		});
 		window.location.hash = target
 	}
@@ -93,6 +105,7 @@ In memory of Daniel Parson(1989-2023)<br />
 	body ul li { list-style-type: none; padding:5px 10px; margin-bottom:1px; border-radius:2px }
 	body #search { text-transform: lowercase; }
 	body ul li.match { background:#d0c0df; }
+	body ul li .source { float:right;font-style:italic }
 	body ul .en { }
 	body ul .sr { background:black; }
 </style>
