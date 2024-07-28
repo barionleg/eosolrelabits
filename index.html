@@ -77,7 +77,11 @@ In memory of Daniel Parson(1989-2023)<br />
 		});
 		// Print
 		Object.keys(sources).forEach((s) => {
-			html += `<li class='${lang} ${cl}'><b>${target}</b>: ${sources[s].join(', ')} <span class='source'>${s}</span></li>`	
+			let anchors = ""
+			sources[s].forEach((w, id) => {
+				anchors += `<a onclick="findword('${w}')">${w}</a>${id < sources[s].length-1 ? ',' : ''} `
+			})
+			html += `<li class='${lang} ${cl}'><b>${target}</b>: ${anchors} <span class='source'>${s}</span></li>`	
 		});
 		return html
 	}
@@ -85,6 +89,7 @@ In memory of Daniel Parson(1989-2023)<br />
 	// Find value
 	function findword(target) {
 		let res = document.getElementById("result")
+		document.getElementById("search").value = target
 		res.innerHTML = ""
 		if (target.length < 2)
 			return
@@ -115,10 +120,12 @@ In memory of Daniel Parson(1989-2023)<br />
 
 <style>
 	body { background-color: #ebd6ff; padding: 30px; max-width:600px; margin:0px auto; font-family: sans-serif}
-	body a { color: #5900b3; }
+	body a { color: #5900b3; cursor:pointer }
+	body a:hover { text-decoration: underline }
 	body ul { padding: 0px }
 	body ul li { list-style-type: none; padding:5px 10px; margin-bottom:1px; border-radius:2px; border-bottom:1px solid #d0c0df }
-	body #search { text-transform: lowercase; }
+	body #search { text-transform: lowercase; padding:5px }
+	body #button { text-transform: lowercase; padding:5px }
 	body ul li.match { background:#d0c0df; }
 	body ul li .source { float:right;font-style:italic }
 	body ul .en { }

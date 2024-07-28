@@ -1269,7 +1269,7 @@ Solmifare	Half step (Leading tone?)
 Solmifami	Interval, gap
 Solmifasol	Interval of a tone, semitone, half step
 Solmifala	Major key, major mode
-Solmifasi	Dominant, sub-dominant (?)
+Solmifasi	Dominant, sub-dominant 
 Solmisoldo	To compose, composition, composer, maestro
 Solmisolre	Music, musician, musical, musically
 Solmisolmi	Note, whole note, half note, quarter note
@@ -1347,7 +1347,7 @@ Sollafare	Photograph, photograph, photographic
 Sollafami	Reproduce, reflect, reproduction, reflection, reflectivity, reflexivity, reflector
 Sollafasol	Portrait, image, picture, likeness, portrait painter
 Sollafala	Resemble, like, similarity, resemblance, likeness, analogy, relation, homogeneity, similar, homogeneous
-Sollafasi	Conformity, identity (?), conforms, similar, same, identical, in accordance, the same as, such as, similarly, likewise
+Sollafasi	Conformity, identity, conforms, similar, same, identical, in accordance, the same as, such as, similarly, likewise
 Sollasoldo	(to write in) Stenography, shorthand, stenographer, stenographic
 Sollasolre	Lithography, lithographer, lithographical (a method of printing)
 Sollasolmi	Engrave, engraving, engraver
@@ -1371,7 +1371,7 @@ Solsiremi	To be inspired, to draw inspiration from, inspiration, inspiring
 Solsirefa	Discourse, harangue, speech, address, speaker, talker, orator
 Solsiresol	Eloquence, eloquent, eloquently
 Solsirela	Remarkable, notable, outstanding, remarkably, notably
-Solsiresi	The peak, pinnacle, zenith, climax, culmination, perfect beauty, virtuoso, phoenix (?), eminent, transcendent, sublime, eminently, the highest degree, superlative, the ultimate
+Solsiresi	The peak, pinnacle, zenith, climax, culmination, perfect beauty, virtuoso, phoenix, eminent, transcendent, sublime, eminently, the highest degree, superlative, the ultimate
 Solsimido	To soften, to become effeminate, softening, softeness, weakness, enervation, soft, weakens, effeminate
 Solsimire	Idea, notion, concept
 Solsimifa	Metaphysics, ideology, metaphysician, ideologist, idealogical, ideographic
@@ -1406,7 +1406,7 @@ Ladomido	Establish, institute, erect, found, establishment, foundation, erection
 Ladomire	Shop, store, boutique, shopkeeper
 Ladomifa	Workshop, studio, foreman, workshop leader
 Ladomisol	Tarnish, become dull, dull, dim, matte
-Ladomila	Agree, stipulate, make a pact, compromise, convention, stipulation, pact, market (?), clause, conventional, conventionally
+Ladomila	Agree, stipulate, make a pact, compromise, convention, stipulation, pact, market, clause, conventional, conventionally
 Ladomisi	Deal, to deal with, negotiate, compromise, capitulate, give in, treaty, transaction, capitulation, transactional
 Ladofado	Trade, traffic (of goods), merchant, trading, trafficker, dealer, commercial, commercially
 Ladofare	Associate, partner with, association, common funds, copartner, partner, jointly, shared
@@ -1472,7 +1472,7 @@ Lamidore	Augment, increase, enlarge, add to, magnify, magnification, extra, adde
 Lamidomi	Abound, to flow, plenty, abundance, exuberance, abundant, copious, exuberant, abundantly, copiously, profusely
 Lamidofa	Fructify, be productive, yield a profit, fertilize, fertility, fertile, fertile, productive
 Lamidosol	Mix, jumble, muddle, scramble, mixed, jumbled, scrambled, chaos, confused, confusion
-Lamidola	Tread, set foot on, trample, knead (?), stomping, pressing, kneading, trampling
+Lamidola	Tread, set foot on, trample, knead, stomping, pressing, kneading, trampling
 Lamidosi	Crush, grind, pulverize, crushing, grinding, mashing, pulverization, crushed, ground, in powder
 Lamiredo	Borrowing, loan, borrower
 Lamiremi	Make credit, credit, creditor, lender, a credit account
@@ -1497,13 +1497,13 @@ Lamilare	To bid, to outbid, bid more than, make a higher bid, bidding, higher pr
 Lamilami	To double, double, duplicate, doubly
 Lamilafa	Commodity, merchandise, goods
 Lamilasol	Number, quantity, amount, numerous, many, multiplicity, large number, the largest number, most, in number
-Lamilasi	Employ, apply, use, utilise, consume (?), adapt, make use of, application, consumer (?), applicable, adaptable
+Lamilasi	Employ, apply, use, utilise, consume, adapt, make use of, application, consumer, applicable, adaptable
 Lamisido	Engage, enlist, engagement, commitment, enrollment, enroller
 Lamisire	Register, record, recording, recorder
 Lamisimi	Disobey, disobedience, insubordination, rebellion, disobedient, rebellious, insubordinate, unruly, indirigible
 Lamisifa	Result, occur, arise, result, consequence, consequently, as a result, accordingly, in consequence, therefore, because of this
 Lamisisol	Balance sheet, toll, assessment, report
-Lamisila	Budget, statistical (?), budget of things
+Lamisila	Budget, statistical, budget of things
 Lafadore	Bankrupt certificate ? Concordat ? Legal settlement ?
 Lafadomi	Add, addition, additional
 Lafadofa	Subtract, subtraction
@@ -1596,7 +1596,7 @@ Lasimila	Ball of thread, (Pincushion?)
 Lasimisi	Skein
 Lasifado	Indelicacy, indelicate, incelicately
 Lasifare	Fair, showman
-Lasifami	Toys, toy, rattles (?)
+Lasifami	Toys, toy, rattles
 Lasifasol	Doll, dolls
 Lasifala	Puppets, marionettes, puppet
 Lasifasi	Lottery
@@ -1637,9 +1637,9 @@ Sidosolfa	Alley, avenue, aisle
 Sidosolla	Passage
 Sidosolsi	Corridor, hallway, maze, labyrinth
 Sidolado	Suburb, suburban
-Sidolare	Dock, lifting (?), dyke, dam
+Sidolare	Dock, lifting, dyke, dam
 Sidolami	River, fluvial
-Sidolafa	Bridge, pontoon (?)
+Sidolafa	Bridge, pontoon
 Sidolasol	Arch, archway, arc
 Sidolasi	Fountain
 Sidosido	Centralize, centralization, center, middle, central, in the midst, centrally
@@ -1801,7 +1801,7 @@ Siladosi	Arrest, arresting
 Silaredo	Customs, customs officer
 Silaremi	Grant admission, right of entry
 Silarefa	Storehouse, warehouse
-Silaresol	Monopolize, monopoly, taxation (?), tax (?), tribute, contribution, taxpayer, contributory, tributary
+Silaresol	Monopolize, monopoly, taxation, tax, tribute, contribution, taxpayer, contributory, tributary
 Silarela	Forbid, prohibit, interdiction, prohibition, forbidden, illegal, prohibited
 Silaresi	Poach, defraud, cheat (on), poaching, smuggling, fraud, poacher, smuggler, fraudulent, fraudulently
 Silamido	Police, police officer, policeman, police sergeant
@@ -1978,7 +1978,7 @@ Dosolsolsi	Extreme Unction (anointing the sick, esp. when administered to the dy
 Dolalado	Litany, litanies (a "call and response" recital in church services or processions)
 Dolalare	To say Psalms, to chant Psalms, psalmody, psalmist, psalm, canticle
 Dolalami	Plainchant, plainsong (Unaccompanied church music sung in unison, taken from the liturgy)
-Dolalafa	Lectern, "easel" (?)
+Dolalafa	Lectern, "easel"
 Dolalasol	Master, Choirboy 
 Dolalasi	Cense, incense, censer
 Dosisido	Seminar, seminarian
@@ -2014,7 +2014,7 @@ Dosolsisi	Kneel, bow down, genuflection, prostration, kneeling, prostrate
 Doladodo	Admit, admission
 Dolarere	Confess, confession, penitent
 Dolamimi	To hear a confession, confessional, the confessional, tribune of penitence, confessor
-Dolafafa	Reconcile, patch up, mend, repatriate (?), reconciliation, reconciling
+Dolafafa	Reconcile, patch up, mend, repatriate, reconciliation, reconciling
 Dolasolsol	Deliver, save, rescue, deliverer, saviour
 Dolasisi	Protect, patronize, protection, patronage, protectorate, auspices, protector, patron, patroness
 Dosidodo	Glorify, give glory, glorification
@@ -2093,7 +2093,7 @@ Resisido	Mechanics, machine, device, mechanic, machinist, mechanical, mechanical
 Resisire	Lever
 Resisimi	Cylinder, roller, cylindrical
 Resisifa	Tube, pipe, conduit, piping
-Resisisol	Bar, block, line (?)
+Resisisol	Bar, block, line
 Resisila	Rails, tracks, railway line
 Redorere	Tank, reservoir, pool, container
 Redomimi	Valve
@@ -2175,7 +2175,7 @@ Midodola	Exceed, overstep, excess, surplus, excessive, too much, too many, immod
 Midodosi	With
 Mireredo	Any, anything, everything, whatever, doesn't matter
 Mireremi	No matter, nevermind, it doesn't matter, it is irrelevant
-Mirerefa	Only, not only (?)
+Mirerefa	Only, not only
 Mireresol	Little by little, gradually, imperceptibly, gradual, by degrees
 Mirerela	Too bad, what a shame
 Mireresi	How good, good (as an expression)
@@ -2216,11 +2216,11 @@ Miresolsol	So that, in order that
 Mirelala	Perhaps, possibly, maybe
 Miresisi	Moreover, besides
 Mifadodo	One before the other
-Mifarere	Alternate, alternative, alternatviely, one after the other (?)
+Mifarere	Alternate, alternative, alternatviely, one after the other
 Mifamimi	Neither one nor the other
 Mifasolsol	In no respect, no way
 Mifalala	Anyone, anybody, everyone, whoever
-Mifasisi	Not related (?)
+Mifasisi	Not related
 Misoldodo	That is to say, for example, in other words, for instance
 Misolrere	Early, ahead of time, early hour
 Misolmimi	In all respects, in every respect, by every measure
@@ -2235,7 +2235,7 @@ Milasolsol	What do you say?
 Milasisi	What has happened? What happened? What's new?
 Misidodo	First, firstly, primarily, first of all
 Misirere	Who is it? Who goes there?
-Misimimi	More (such as cessation of action) (?)
+Misimimi	More (such as cessation of action)
 Misifafa	Alas!
 Misisolsol	Extreme, the last point, the final point
 Misilala	Last, finally
@@ -2324,9 +2324,9 @@ Faresolsol	Pungency, acrid, corrosive
 Farelala	Harshness, bitterness, harsh, bitter, harshly, bitterly
 Faresisi	Acidify, acidity, acid
 Famidodo	Embitter, sourness, acrimony, tart, sour
-Famirere	Camphor (verb, noun, adj.)
+Famirere	Camphor
 Famifafa	Narcotic, drug, soporific, opium, henbane, belladonna
-Famisolsol	Chloroform (v. and n.)
+Famisolsol	Chloroform
 Familala	Etherize, etherisation, ether, sulferic ether, nitric or phosphoric ether, mineral or fossil ether, ethereal
 Famisisi	Deny, negate, negation, denial
 Fasoldodo	Slide, slider, sliding
@@ -2337,7 +2337,7 @@ Fasollala	Dress, bandage, dressing (of a wound), plaster
 Fasolsisi	Minority, the few, minor, minimum
 Faladodo	Operate, operation, operator
 Falarere	Scar, cicatrize, scar, cicatrix, cicatrizing
-Falamimi	Bandage, ligature (?), headband
+Falamimi	Bandage, ligature, headband
 Falafafa	Strap, sling, garter
 Falasolsol	Cripple, maim, disable, handicap, disability, invalid, disabled, crippled
 Falasisi	Deformity, deformed
@@ -2370,7 +2370,7 @@ Solsolfare	Pain, ache, throbbing, twinges
 Solsolfami	Rheumatism, rheumatic
 Solsolfasol	Paralysis, paralytic
 Solsolfala	Catalepsy, cataleptic
-Solsolfasi	Epilepsy, lockjaw (tetanus) (?), epileptic
+Solsolfasi	Epilepsy, lockjaw, epileptic
 Solsollado	Stone
 Solsollare	Bladder
 Solsollami	Genitals, urethra
@@ -2396,7 +2396,7 @@ Solreresol	Smallpox
 Solrerela	Scabies, mange, ringworm, mangy
 Solreresi	Leprosy, leprous
 Solmimido	Scab, scabby
-Solmimire	Itch (v.), itch (n.), pruritus, itching, prurigo
+Solmimire	Itch, pruritus, itching, prurigo
 Solmimifa	Scrape, scraper
 Solmimisol	Inflame, inflammation, inflammable
 Solmimila	Gangrene, become corrupt, gangrene, gangrenous
@@ -2412,9 +2412,9 @@ Sollalare	Purge, purify, purgation, purgative, cathartic, depurative
 Sollalami	Castor oil, Seidlitz water, senna
 Sollalafa	Evacuate, expel, push out/off, evacuation, expulsion
 Sollalasol	Excrement, poop, poo, diarrhea, diarrheic, excremental
-Sollalasi	Urinate, pee, piss, urine, piss, pee
+Sollalasi	Urinate, pee, piss, urine, pee
 Solsisido	Latrines, toilet, loo, restroom, bathroom
-Solsisire	Sewage, emptier (?)
+Solsisire	Sewage, emptier
 Solsisimi	Infect, stink, infection, stench, reek, fetidness, foul, disgusting, repulsive, apalling, stinking, fetid, rank
 Solsisifa	Rot, rotten, corrupt, stale
 Solsisisol	Worm, maggot, verminous
@@ -2753,7 +2753,7 @@ Dorefaredo	Butterfly
 Dorefaremi	Chafer, beetle
 Dorefarefa	Cicada, dragonfly
 Dorefaresol	Grasshopper
-Dorefarela	Aphid, cochineal (?)
+Dorefarela	Aphid, cochineal 
 Dorefaresi	Spider
 Dorefamido	Silkworm
 Dorefamire	Caterpillar
@@ -2798,7 +2798,7 @@ Doresolmisol	Tit
 Doresolmila	Wagtail
 Doresolmisi	Hummingbird
 Doresolfado	Hummingbird
-Doresolfare	Bird of Paradise (?)
+Doresolfare	Bird of Paradise
 Doresolfami	Swallow
 Doresolfasol	Swift
 Doresolfala	Twitter, chirp, warble, twittering
@@ -2869,7 +2869,7 @@ Doresimifa	Mullet
 Doresimisol	Salmon, Trout Salmon
 Doresimila	Turbot
 Doresimisi	Tuna
-Doresifado	Sea monster, dolphin (?)
+Doresifado	Sea monster, dolphin
 Doresifare	Sea horse
 Doresifami	Porpoise
 Doresifasol	Shark
