@@ -29,6 +29,7 @@ In memory of Daniel Parson(1989-2023)<br />
 		sr: {},
 		en: {}
 	};
+	let notes = ['do', 're', 'mi', 'fa', 'sol', 'la', 'si']
 	dict.split('\n').forEach((value) => {
 		if(!value) return
 		let parts = value.split('\t')
@@ -110,9 +111,17 @@ In memory of Daniel Parson(1989-2023)<br />
 		let res = ""
 		let segs = explode_srs(w)
 		let ss = ['𐑴', '𐑦', '𐑵', '𐑳', '𐑯', '𐑤', '𐑨']
+		let dd = ['̭', '̤', '̣', '_', '̇', '̈', '̌']
+		let last = 0
 		if(!segs) return ""
 		segs.forEach((v, id) => {
-			res += ss[v]
+			let offset = v - last
+			if(offset < -3) offset = offset + 7
+			else if(offset > 3) offset = offset - 7
+			
+			if(id & 1) res += offset ? dd[offset+3] : ss[v]
+			else res += ss[v]
+			last = v
 		})
 		return res
 	}
@@ -120,7 +129,6 @@ In memory of Daniel Parson(1989-2023)<br />
 	function unses(w){
 		let res = ""
 		let segs = explode_ses(w)
-		let notes = ['do', 're', 'mi', 'fa', 'sol', 'la', 'si']
 		if(!segs) return ""
 		segs.forEach((s) => { res += notes[s] })
 		return res
@@ -198,8 +206,9 @@ In memory of Daniel Parson(1989-2023)<br />
 
 		if (target.length < 2)
 			return
+
 		// Unpack
-		if(data.sr[unses(target)])
+		if(!data.sr[target] && unses(target) && data.sr[unses(target)])
 			target = unses(target)
 
 		if(explode_srs(target))
