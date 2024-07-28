@@ -171,7 +171,7 @@ In memory of Daniel Parson(1989-2023)<br />
 		let shavian = ""
 		w.split(' ').forEach((t) => { html += ses(t) + " " })
 		w.split(' ').forEach((t) => { shavian += sha(t) })
-		return `<i>${html}</i>(${shavian})`
+		return `<i>${html}</i> ${shavian}`
 	}
 
 	function echoword(lang, target, cl){

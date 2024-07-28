@@ -601,7 +601,7 @@ Remilasi	Balcony, balustrade, railing
 Remisido	Cellar, vault
 Remisire	Cask, barrel
 Remisimi	Ground floor, first floor
-Remisifa	Dally, dawdle, linger, slow, stragglers, slowpoke, slowly
+Remisifa	Slow, stragglers, slowpoke, slowly, dally, dawdle, linger
 Remisisol	Staircase, stairs, steps, step
 Remisila	Floor (1st, 2nd, 3rd…)
 Refadore	Move in, install
