@@ -1,6 +1,6 @@
 let dict=`
 
-;;	Community Archive
+;;	Particles
 
 Do	No, not, nor
 Re	And, also
@@ -3166,7 +3166,6 @@ Dofaresolsi
 
 ;;	Symmetric
 
-dodo	(past)
 dore	I, me
 domi	you(sing.)
 dofa	they(sing.)
@@ -3175,7 +3174,6 @@ dola	you(plur.)
 dosi	they(plur.)
 
 redo	my, mine
-rere	(pluperfect)
 remi	who?
 refa	when?
 resol	more
@@ -3184,7 +3182,6 @@ resi	even, fair
 
 mido	your(sing.)
 mire	what?
-mimi	(future)
 mifa	how?
 misol	well(adv.)
 mila	near, here
@@ -3193,7 +3190,6 @@ misi	late, evening, night
 fado	their(sing.)
 fare	where?
 fami	which?
-fafa	(conditional)
 fasol	every
 fala	positive
 fasi	much, very
@@ -3202,7 +3198,6 @@ soldo	our
 solre	less
 solmi	ill(adv.)
 solfa	none
-solsol	(imperative)
 solla	always
 solsi	thanks
  	 	 	 	 	 	
@@ -3211,7 +3206,6 @@ lare	unknown
 lami	far, there
 lafa	negative
 lasol	never
-lala	(present participle)
 lasi	affectionate, with, inside
 
 sido	their(plur.)
@@ -3220,7 +3214,6 @@ simi	early, morning, day
 sifa	few, scarcely
 sisol	sorry
 sila	formal, without, outside
-sisi	(passive participle)
 
 `
 

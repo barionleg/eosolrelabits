@@ -106,6 +106,17 @@ In memory of Daniel Parson(1989-2023)<br />
 		return segments
 	}
 
+	function sha(w){
+		let res = ""
+		let segs = explode_srs(w)
+		let ss = ['𐑴', '𐑦', '𐑵', '𐑳', '𐑯', '𐑤', '𐑨']
+		if(!segs) return ""
+		segs.forEach((v, id) => {
+			res += ss[v]
+		})
+		return res
+	}
+
 	function unses(w){
 		let res = ""
 		let segs = explode_ses(w)
@@ -149,8 +160,10 @@ In memory of Daniel Parson(1989-2023)<br />
 
 	function summarize(w){
 		let html = ""
+		let shavian = ""
 		w.split(' ').forEach((t) => { html += ses(t) + " " })
-		return `<i>${html}</i>`
+		w.split(' ').forEach((t) => { shavian += sha(t) })
+		return `<i>${html}</i>(${shavian})`
 	}
 
 	function echoword(lang, target, cl){
@@ -185,8 +198,13 @@ In memory of Daniel Parson(1989-2023)<br />
 
 		if (target.length < 2)
 			return
+		// Unpack
+		if(data.sr[unses(target)])
+			target = unses(target)
+
 		if(explode_srs(target))
 			document.getElementById("summary").innerHTML = summarize(target)
+		
 		// Search for English match
 		if (data.en[target]) {
 			res.innerHTML += echoword("en", target, "match")
@@ -194,10 +212,6 @@ In memory of Daniel Parson(1989-2023)<br />
 		// Search for Solresol match
 		if (data.sr[target]) {
 			res.innerHTML += echoword("sr", target, "match")
-		}
-		// Search for Ses match
-		if (data.sr[unses(target)]) {
-			res.innerHTML += echoword("sr", unses(target), "match")
 		}
 		// Search English
 		Object.keys(data.en).forEach((k) => {
@@ -222,9 +236,10 @@ In memory of Daniel Parson(1989-2023)<br />
 	body ul li { list-style-type: none; padding:5px 10px; margin-bottom:1px; border-radius:2px; border-bottom:1px solid #d0c0df }
 	body #search { text-transform: lowercase; padding:5px }
 	body #button { text-transform: lowercase; padding:5px }
+	body #button:hover { cursor:pointer }
 	body ul li.match { background:#eee9f2 }
 	body ul li .source { float:right;font-style:italic;color:#756584 }
-	body #summary { padding:5px 10px; float:right; }
+	body #summary { line-height: 32px;float: right; font-size: 30px;font-family:serif }
 	body ul .en { }
 	body ul .sr { }
 	.c-do { color: #c40233; }
