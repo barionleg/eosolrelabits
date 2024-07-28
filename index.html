@@ -63,6 +63,25 @@ In memory of Daniel Parson(1989-2023)<br />
 	// Read anchor tag on start
 	if (window.location.hash.substring(1))
 		findword(window.location.hash.substring(1))
+
+	// Print value
+	function echoword(lang, target, cl){
+		let html = ""
+		// Merge sources
+		let sources = {}
+		Object.keys(data[lang][target]).forEach((k) => {
+			data[lang][target][k].forEach((value) => {
+				if(!sources[value]) sources[value] = []
+				sources[value].push(k)
+			})
+		});
+		// Print
+		Object.keys(sources).forEach((s) => {
+			html += `<li class='${lang} ${cl}'><b>${target}</b>: ${sources[s].join(', ')} <span class='source'>${s}</span></li>`	
+		});
+		return html
+	}
+
 	// Find value
 	function findword(target) {
 		let res = document.getElementById("result")
@@ -72,27 +91,23 @@ In memory of Daniel Parson(1989-2023)<br />
 
 		// Search for English match
 		if (data.en[target]) {
-			Object.keys(data.en[target]).forEach((k) => {
-				res.innerHTML += `<li class='en match'><b>${target}</b>: ${k} <span class='source'>${data.en[target][k].join(', ')}</span></li>`	
-			});
+			res.innerHTML += echoword("en", target, "match")
 		}
 
 		// Search for Solresol match
 		if (data.sr[target]) {
-			Object.keys(data.sr[target]).forEach((k) => {
-				res.innerHTML += `<li class='sr match'><b>${target}</b>: ${k} <span class='source'>${data.sr[target][k].join(', ')}</span></li>`	
-			});
+			res.innerHTML += echoword("sr", target, "match")
 		}
 
 		// Search English
 		Object.keys(data.en).forEach((k) => {
 			if (k.includes(target) && k != target)
-				res.innerHTML += `<li class='en'><b>${k}</b>: ${Object.keys(data.en[k]).join(', ')} <span class='source'>${Object.values(data.en[k]).join(', ')}</span></li>`
+				res.innerHTML += echoword("en", k, " ")
 		});
 		// Search Solresol
 		Object.keys(data.sr).forEach((k) => {
 			if (k.includes(target) && k != target)
-				res.innerHTML += `<li class='en'><b>${k}</b>: ${Object.keys(data.sr[k]).join(', ')} <span class='source'>${Object.values(data.sr[k]).join(', ')}</span></li>`
+				res.innerHTML += echoword("sr", k, " ")
 		});
 		window.location.hash = target
 	}
@@ -102,12 +117,12 @@ In memory of Daniel Parson(1989-2023)<br />
 	body { background-color: #ebd6ff; padding: 30px; max-width:600px; margin:0px auto; font-family: sans-serif}
 	body a { color: #5900b3; }
 	body ul { padding: 0px }
-	body ul li { list-style-type: none; padding:5px 10px; margin-bottom:1px; border-radius:2px }
+	body ul li { list-style-type: none; padding:5px 10px; margin-bottom:1px; border-radius:2px; border-bottom:1px solid #d0c0df }
 	body #search { text-transform: lowercase; }
 	body ul li.match { background:#d0c0df; }
 	body ul li .source { float:right;font-style:italic }
 	body ul .en { }
-	body ul .sr { background:black; }
+	body ul .sr { }
 </style>
 
 </html> 
