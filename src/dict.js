@@ -1874,6 +1874,7 @@ Fafasol	Fourty, fourtieth
 Fafala	Fifty, fiftieth
 Fafasi	Sixty, sixtieth
 Fadodo	Eighty, eightieth
+fadodo mimisol Ninety, ninetieth
 Farere	Hundred, hundredth
 Famimi	Thousand, thousandth
 Fasolsol	Million, millionth
